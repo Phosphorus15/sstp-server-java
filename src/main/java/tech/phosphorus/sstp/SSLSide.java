@@ -16,7 +16,7 @@ public class SSLSide {
 	public static KeyManager[] keys() {
 		try {
 			final KeyStore keyStore = KeyStore.getInstance("JKS");
-			keyStore.load(new FileInputStream("I:\\keystore"), "lance2000".toCharArray());
+			keyStore.load(new FileInputStream("./etc/keystore"), "lance2000".toCharArray());
 			Enumeration e = keyStore.aliases();
 			while(e.hasMoreElements()) System.out.println(e.nextElement());
 			final KeyManagerFactory kmf = KeyManagerFactory.getInstance(KeyManagerFactory
